@@ -1,0 +1,50 @@
+@use 'globalStyles';
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 3rem 0;
+
+  h2 {
+    font-weight: globalStyles.$medium;
+    font-size: 2rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.testimonial__card {
+  border: 1px solid globalStyles.$gray;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &--title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .testimonials {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    &__cards {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,365 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background: #181818;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  color: #fff;
+}
+
+.btn {
+  background: #4452fe;
+  color: #fff;
+  border: none;
+  padding: 20px 40px;
+  border-radius: 8px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+}
+.navbar__logo {
+  width: 50px;
+}
+.navbar__menu {
+  width: 100%;
+  order: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  transform: translateX(-200%);
+  position: absolute;
+  top: 75px;
+  background: #181818;
+}
+@media (min-width: 1000px) {
+  .navbar__menu {
+    transform: translateX(0);
+    flex-direction: row;
+    position: static;
+    order: 0;
+    width: auto;
+  }
+}
+.navbar__menu li {
+  border-bottom: 1px solid #fff;
+  width: 100%;
+}
+@media (min-width: 1000px) {
+  .navbar__menu li {
+    border: none;
+  }
+}
+.navbar .btn-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 1000px) {
+  .navbar .btn-container {
+    gap: 0;
+  }
+}
+.navbar .btn-container .btn-login {
+  border: 1px solid #fff;
+  padding: 0.8rem 2.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+@media (min-width: 1000px) {
+  .navbar .btn-container .btn-menu {
+    display: none;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 100%;
+  gap: 4rem;
+  padding: 4rem 0;
+}
+.hero__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 350px;
+  text-align: center;
+}
+.hero__text h1 {
+  font-weight: 400;
+  font-size: 2.1rem;
+}
+.hero__bg {
+  max-width: 90%;
+}
+
+@media (min-width: 1000px) {
+  .hero__text {
+    max-width: 700px;
+    gap: 40px;
+  }
+  .hero__text h1 {
+    font-size: 3rem;
+  }
+  .hero__text p {
+    max-width: 600px;
+  }
+  .hero__bg {
+    max-width: 1000px;
+  }
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 3rem 0;
+}
+.product__text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.product__text h2 {
+  font-weight: 500;
+  font-size: 2.1rem;
+}
+.product__img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.product__img-chatbot {
+  width: 100%;
+}
+
+.product__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.product__cards .product__card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.product__cards .product__card--title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 1000px) {
+  .product {
+    max-width: 1000px;
+  }
+  .product__text {
+    max-width: 600px;
+  }
+  .product__img {
+    flex-direction: row;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 3rem 0;
+}
+.about__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.about__text h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+.about__cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.about__card {
+  background: #fff;
+  color: #181818;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 330px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 3rem 2rem;
+}
+.about__card:first-child {
+  padding: 3rem 2rem;
+  gap: 20px;
+}
+.about__card:last-child {
+  padding: 3rem 2rem 0;
+}
+.about__card:last-child p {
+  margin: 20px 0;
+}
+
+@media (min-width: 1000px) {
+  .about__cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 3rem 0;
+}
+.testimonials h2 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+.testimonials__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.testimonial__card {
+  border: 1px solid #5c5c5c;
+  border-radius: 10px;
+  padding: 2rem;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.testimonial__card--title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@media (min-width: 1000px) {
+  .testimonials {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .testimonials__cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.cta {
+  padding: 4rem 0;
+  background: #1e1e1e;
+}
+.cta__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cta__card--title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.cta__card--title h2 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.cta__card img {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .cta__card {
+    flex-direction: row;
+    justify-content: center;
+    gap: 40px;
+    background: #343434;
+    max-width: 980px;
+    margin: 0 auto;
+    border-radius: 30px;
+  }
+  .cta__card--title {
+    align-items: flex-start;
+  }
+  .cta__card img {
+    display: block;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+footer .footer__nav {
+  display: none;
+}
+footer .redes__nav {
+  display: flex;
+  gap: 20px;
+}
+
+@media (min-width: 1000px) {
+  footer {
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 50px;
+  }
+  footer .footer__nav {
+    display: block;
+  }
+  footer .footer__nav h3 {
+    font-size: 1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid #fff;
+  }
+  footer .footer__nav__list {
+    padding: 10px 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

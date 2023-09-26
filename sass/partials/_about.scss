@@ -1,0 +1,64 @@
+@use 'globalStyles';
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 3rem 0;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    h2 {
+      font-weight: globalStyles.$light;
+      font-size: 2.5rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__card {
+    background: globalStyles.$white;
+    color: globalStyles.$dark-text;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 330px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 3rem 2rem;
+
+    &:first-child {
+      padding: 3rem 2rem;
+      gap: 20px;
+    }
+
+    &:last-child {
+      padding: 3rem 2rem 0;
+
+      p {
+        margin: 20px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .about__cards {
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+  }
+}

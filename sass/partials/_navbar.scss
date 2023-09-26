@@ -1,0 +1,67 @@
+@use 'globalStyles';
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+
+  &__logo {
+    width: 50px;
+  }
+
+  &__menu {
+    width: 100%;
+    order: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transform: translateX(-200%);
+    position: absolute;
+    top: 75px;
+    background: globalStyles.$dark-bg;
+
+    @media (min-width: 1000px) {
+      transform: translateX(0);
+      flex-direction: row;
+      position: static;
+      order: 0;
+      width: auto;
+    }
+  }
+
+  &__menu li {
+    border-bottom: 1px solid globalStyles.$white;
+    width: 100%;
+
+    @media (min-width: 1000px) {
+      border: none;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @media (min-width: 1000px) {
+      gap: 0;
+    }
+
+    .btn-login {
+      border: 1px solid globalStyles.$white;
+      padding: 0.8rem 2.5rem;
+      border-radius: 8px;
+      font-weight: globalStyles.$medium;
+    }
+
+    .btn-menu {
+      @media (min-width: 1000px) {
+        display: none;
+      }
+    }
+  }
+}
